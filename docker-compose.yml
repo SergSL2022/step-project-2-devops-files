@@ -8,6 +8,8 @@ services:
     ports:
       - "3015:8080"
       - "50000:50000"
+    restart: always
+
 volumes:
   jenkins-home:
 

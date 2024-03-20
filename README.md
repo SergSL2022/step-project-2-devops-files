@@ -17,3 +17,15 @@ Creating VMs, install server monitoring, install Docker with Vagrantfile: https:
 
 Install Jenkins server in docker container:
 https://github.com/SergSL2022/step-project-2-devops-files/blob/main/docker-compose.yml
+![alt text](<screenshots/Знімок екрана з 2024-03-20 20-54-55.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 20-36-13.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 20-37-53.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 20-38-28.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 20-40-17.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 20-41-41.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 20-41-53.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 20-55-36.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 20-44-30.png>)
+
+
+
