@@ -60,4 +60,21 @@ Testing jenkins worker
 ![alt text](<screenshots/Знімок екрана з 2024-03-20 23-09-11.png>)
 
 
+STEP 7 ===>
 
+Adding Docker hub credentials (login and token)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 23-40-00.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 23-41-00.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 23-41-34.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 23-44-50.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 23-45-00.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 23-45-24.png>)
+
+Adding Gitlab credentials (login and token)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 23-54-02.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 23-55-02.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 23-55-29.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 23-57-52.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-21 00-00-11.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-21 00-00-16.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-21 00-00-27.png>)
