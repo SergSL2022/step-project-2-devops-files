@@ -13,7 +13,7 @@ Create test account in Docker hub(free)
 
 STEP 3, 4, 5 ===>
 
-Creating VMs, install server monitoring, install Docker with Vagrantfile: https://github.com/SergSL2022/step-project-2-devops-files/blob/main/vagrantfile
+Creating VMs, install server monitoring, install Docker with Vagrantfile: https://github.com/SergSL2022/step-project-2-devops-files/blob/main/Vagrantfile
 
 Install Jenkins server in docker container:
 https://github.com/SergSL2022/step-project-2-devops-files/blob/main/docker-compose.yml
