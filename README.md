@@ -45,3 +45,19 @@ Create and configure jenkins worker
 ![alt text](<screenshots/Знімок екрана з 2024-03-20 21-27-48.png>)
 ![alt text](<screenshots/Знімок екрана з 2024-03-20 21-28-09.png>)
 ![alt text](<screenshots/Знімок екрана з 2024-03-20 21-52-49.png>)
+
+Testing jenkins worker
+![alt text](<screenshots/Знімок екрана з 2024-03-20 22-51-15.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 22-52-08.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 22-56-12.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 22-56-20.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 22-56-27.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 22-56-59.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 22-57-39.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 22-58-05.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 22-58-41.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 22-59-02.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 23-09-11.png>)
+
+
+
