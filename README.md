@@ -27,5 +27,21 @@ https://github.com/SergSL2022/step-project-2-devops-files/blob/main/docker-compo
 ![alt text](<screenshots/Знімок екрана з 2024-03-20 20-55-36.png>)
 ![alt text](<screenshots/Знімок екрана з 2024-03-20 20-44-30.png>)
 
+STEP 6 ===>
 
+Connecting to jenkins-worker VM
+![alt text](<screenshots/Знімок екрана з 2024-03-20 21-18-57.png>) 
 
+Create credentials for jenkins-worker VM
+![alt text](<screenshots/Знімок екрана з 2024-03-20 21-20-32.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 21-33-24.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 21-21-03.png>)
+
+Create and configure jenkins worker
+![alt text](<screenshots/Знімок екрана з 2024-03-20 21-21-34.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 21-22-01.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 21-25-18.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 21-26-18.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 21-27-48.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 21-28-09.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-20 21-52-49.png>)

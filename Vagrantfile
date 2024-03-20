@@ -167,7 +167,7 @@ EOL
 
 
     # Install Java
-      sudo apt install default-jre
+      sudo apt install -y default-jre
     SHELL
   end
 end
