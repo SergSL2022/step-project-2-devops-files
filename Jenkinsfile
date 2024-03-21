@@ -46,6 +46,11 @@ pipeline {
                 sh """
                 pwd
                 ls -la
+                npm run build
+                pwd
+                ls -la
+                docker build -t react-app:v.0.0.${BUILD_NUMBER} .
+                docker images
                 """
             }
         }
