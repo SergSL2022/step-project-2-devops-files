@@ -46,6 +46,7 @@ pipeline {
                 sh """
                 pwd
                 ls -la
+                npx update-browserslist-db@latest
                 npm run build
                 pwd
                 ls -la
