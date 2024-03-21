@@ -5,6 +5,9 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "Checkout stage"
+                git branch: "main",
+                    credentialsId: "Gitlab",
+                    url: "https://gitlab.com/serhiy.slipchuk/step-project-2.git"
                 sh """
                 ip a
                 pwd
