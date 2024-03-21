@@ -1,10 +1,6 @@
 pipeline {
     agent{ label "ip-177" }
 
-    triggers {
-        pollSCM ignoreChanges: [specificPath('https://github.com/SergSL2022/step-project-2-devops-files.git')]
-    }
-
     stages{
         stage('Checkout') {
             steps {
@@ -26,6 +22,8 @@ pipeline {
                 sh """
                 pwd
                 ls -la
+                npm install
+                ls -la
                 """
             }
 
@@ -37,6 +35,7 @@ pipeline {
                 sh """
                 pwd
                 ls -la
+                npm run test
                 """
             }
         }
