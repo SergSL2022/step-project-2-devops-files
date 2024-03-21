@@ -46,6 +46,7 @@ pipeline {
                 sh """
                 pwd
                 ls -la
+                set CI=false
                 npm run build
                 pwd
                 ls -la
