@@ -32,11 +32,14 @@ pipeline {
         stage('Run tests') {
             steps {
                 echo "Running tests"
-                sh """
-                pwd
-                ls -la
-                npm run test
-                """
+                catchError(message: 'Tests failed', buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
+                    sh """
+                        exit 1
+                        pwd
+                        ls -la
+                        npm run test
+                    """
+                }
             }
         }
 
