@@ -32,19 +32,15 @@ pipeline {
         stage('Run tests') {
             steps {
                 echo "Running tests"
-                catchError(message: 'Tests failed', stageResult: 'FAILURE', buildResult: 'FAILURE') {
-                    sh """
-                        exit 1
-                        pwd
-                        ls -la
-                        npm run test
-                    """
-                }
+                sh """
+                    exit 1
+                    pwd
+                    ls -la
+                    npm run test
+                """
             }
         }
-    }
 
-    catchError(stageResult: 'UNSTABLE', buildResult: 'SUCCESS') {
         stage('Build Docker image') {
             steps {
                 echo "Building Docker image"
@@ -59,9 +55,7 @@ pipeline {
                 """
             }
         }
-    }
-    
-    catchError(stageResult: 'UNSTABLE', buildResult: 'SUCCESS') {
+
         stage('Push Docker image') {
             steps {
                 echo "Pushing Docker image to Dockerhub registry"
@@ -71,5 +65,9 @@ pipeline {
                 """
             }
         }
+    }
+
+    catchError(stageResult: 'UNSTABLE', buildResult: 'SUCCESS') {
+        echo "There was an error in the pipeline"
     }
 }
