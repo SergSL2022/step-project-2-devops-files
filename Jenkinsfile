@@ -32,14 +32,14 @@ pipeline {
         stage('Run tests') {
             steps {
                 echo "Running tests"
-                catchError(message: 'Tests failed') {
+             
                     sh """
                         exit 1
                         pwd
                         ls -la
                         npm run test
                     """
-                }
+                
             }
         }
 
@@ -68,4 +68,12 @@ pipeline {
             }
         }
     }
+
+     error {
+            // Цей блок виконується лише в разі виникнення помилки в пайплайні
+            // Можна вказати додаткові дії, які потрібно виконати при помилці
+            echo 'Tests failed! Stopping the pipeline.'
+            currentBuild.result = 'FAILURE' // Позначаємо пайплайн як невдалий
+            error 'Tests failed!' // Цей рядок вказує Jenkins, що потрібно зупинити пайплайн
+        }
 }
