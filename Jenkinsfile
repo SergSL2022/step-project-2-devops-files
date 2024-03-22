@@ -32,42 +32,50 @@ pipeline {
         stage('Run tests') {
             steps {
                 echo "Running tests"
-                sh """
-                    exit 1
-                    pwd
-                    ls -la
-                    npm run test
-                """
+                script {
+                    try {
+                        sh """
+                        exit 1
+                        pwd
+                        ls -la
+                        npm run test
+                        """
+                    } catch (Exception e) {
+                        currentBuild.result = 'FAILURE'
+                        error("Tests failed: ${e}")
+                    }
+                }
             }
         }
-
+        
         stage('Build Docker image') {
             steps {
-                echo "Building Docker image"
-                sh """
-                    pwd
-                    ls -la
-                    CI=false npm run build
-                    pwd
-                    ls -la
-                    docker build -t react-app:v.0.0.${BUILD_NUMBER} .
-                    docker images
-                """
+                catchError(stageResult: 'UNSTABLE', buildResult: 'SUCCESS') {
+                    echo "Building Docker image"
+                    sh """
+                        pwd
+                        ls -la
+                        CI=false npm run build
+                        pwd
+                        ls -la
+                        docker build -t react-app:v.0.0.${BUILD_NUMBER} .
+                        docker images
+                    """
+                }
             }
         }
-
+        
+       
         stage('Push Docker image') {
             steps {
-                echo "Pushing Docker image to Dockerhub registry"
-                sh """
-                pwd
-                ls -la
-                """
+                catchError(stageResult: 'UNSTABLE', buildResult: 'SUCCESS') {
+                    echo "Pushing Docker image to Dockerhub registry"
+                    sh """
+                    pwd
+                    ls -la
+                    """
+                }
             }
         }
-    }
-
-    catchError(stageResult: 'UNSTABLE', buildResult: 'SUCCESS') {
-        echo "There was an error in the pipeline"
     }
 }
