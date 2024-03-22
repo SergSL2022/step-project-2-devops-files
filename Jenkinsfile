@@ -32,7 +32,7 @@ pipeline {
         stage('Run tests') {
             steps {
                 echo "Running tests"
-                catchError(message: 'Tests failed', buildResult: 'FAILURE', stageResult: 'FAILURE') {
+                catchError(message: 'Tests failed') {
                     sh """
                         exit 1
                         pwd
