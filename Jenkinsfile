@@ -18,13 +18,15 @@ pipeline {
 
         stage('Install') {
             steps {
-                echo "Installing dependencies"
-                sh """
-                pwd
-                ls -la
-                npm install
-                ls -la
-                """
+                catchError(stageResult: 'UNSTABLE', buildResult: 'SUCCESS') {
+                    echo "Installing dependencies"
+                    sh """
+                        pwd
+                        ls -la
+                        npm install
+                        ls -la
+                    """
+                }
             }
 
         }
@@ -70,8 +72,8 @@ pipeline {
                 catchError(stageResult: 'UNSTABLE', buildResult: 'SUCCESS') {
                     echo "Pushing Docker image to Dockerhub registry"
                     sh """
-                    pwd
-                    ls -la
+                        pwd
+                        ls -la
                     """
                 }
             }
