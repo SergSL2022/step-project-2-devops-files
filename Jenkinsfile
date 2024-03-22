@@ -71,10 +71,13 @@ pipeline {
             steps {
                 catchError(stageResult: 'UNSTABLE', buildResult: 'SUCCESS') {
                     echo "Pushing Docker image to Dockerhub registry"
-                    sh """
-                        pwd
-                        ls -la
-                    """
+                    docker image tag react-app:v.0.0.${env.BUILD_NUMBER} danit:v.0.0.${env.BUILD_NUMBER}
+                    withCredentials([usernamePassword(credentialsId: 'Dockerhub', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USER')]) {
+                        sh """
+                            docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+                            docker push serhiyslipchuk/danit:v.0.0.${BUILD_NUMBER}
+                        """
+                    }
                 }
             }
         }
