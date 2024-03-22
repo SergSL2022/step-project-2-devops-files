@@ -59,7 +59,7 @@ pipeline {
                         CI=false npm run build
                         pwd
                         ls -la
-                        docker build -t react-app:v.0.0.${BUILD_NUMBER} .
+                        docker build -t danit:v.0.0.${BUILD_NUMBER} .
                         docker images
                     """
                 }
@@ -71,7 +71,6 @@ pipeline {
             steps {
                 catchError(stageResult: 'UNSTABLE', buildResult: 'SUCCESS') {
                     echo "Pushing Docker image to Dockerhub registry"
-                    docker image tag react-app:v.0.0.${env.BUILD_NUMBER} danit:v.0.0.${env.BUILD_NUMBER}
                     withCredentials([usernamePassword(credentialsId: 'Dockerhub', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USER')]) {
                         sh """
                             docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
