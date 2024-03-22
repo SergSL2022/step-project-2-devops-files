@@ -32,7 +32,7 @@ pipeline {
         stage('Run tests') {
             steps {
                 echo "Running tests"
-                catchError(message: 'This stage is unstable', stageResult: 'FAILURE', buildResult: 'FAILURE', catchInterruptions: true) {
+                catchError(message: 'This stage is unstable', stageResult: 'UNSTABLE', buildResult: 'UNSTABLE', catchInterruptions: true) {
                     sh """
                         exit 1
                         pwd
