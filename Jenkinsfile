@@ -35,7 +35,6 @@ pipeline {
                 script {
                     try {
                         sh """
-                        exit 1
                         pwd
                         ls -la
                         npm run test
