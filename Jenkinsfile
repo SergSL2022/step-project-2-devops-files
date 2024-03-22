@@ -59,7 +59,7 @@ pipeline {
                         CI=false npm run build
                         pwd
                         ls -la
-                        docker build -t danit:v.0.0.${BUILD_NUMBER} .
+                        docker build -t serhiyslipchuk/danit:v.0.0.${BUILD_NUMBER} .
                         docker images
                     """
                 }
