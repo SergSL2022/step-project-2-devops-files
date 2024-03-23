@@ -116,3 +116,13 @@ Create an Error in stage "Running tests"
 ![alt text](<screenshots/Знімок екрана з 2024-03-23 19-19-00.png>)
 ![alt text](<screenshots/Знімок екрана з 2024-03-23 19-19-19.png>)
 ![alt text](<screenshots/Знімок екрана з 2024-03-23 19-19-53.png>)
+
+Remove Error from stage "Running tests"
+![alt text](<screenshots/Знімок екрана з 2024-03-23 19-59-30.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 19-59-51.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 20-00-15.png>)
+
+VMs monitoring during pipelines run
+![alt text](screenshots/photo_2024-03-23_20-03-13.jpg)
+![alt text](screenshots/photo_2024-03-23_20-03-28.jpg)
+![alt text](screenshots/photo_2024-03-23_20-03-37.jpg)
