@@ -62,7 +62,7 @@ pipeline {
                     docker images
                     cd ~/
                     mkdir artifacts
-                    docker save -o /home/vagrant/artifacts/danit:v.0.0.${BUILD_NUMBER}.tar serhiyslipchuk/danit:v.0.0.${BUILD_NUMBER}
+                    docker save -o /home/vagrant/artifacts/danit_v.0.0.${BUILD_NUMBER}.tar serhiyslipchuk/danit:v.0.0.${BUILD_NUMBER}
                     """
             }
         }
@@ -83,7 +83,7 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: "/home/vagrant/artifacts/danit:v.0.0.${BUILD_NUMBER}.tar", allowEmptyArchive: true
+            archiveArtifacts artifacts: "/home/vagrant/artifacts/danit_v.0.0.${BUILD_NUMBER}.tar", allowEmptyArchive: true
         }
     }
 }
