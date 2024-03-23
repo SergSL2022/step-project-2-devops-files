@@ -61,7 +61,9 @@ pipeline {
                     docker build -t serhiyslipchuk/danit:v.0.0.${BUILD_NUMBER} .
                     docker images
                     cd ~/
-                    mkdir artifacts
+                    if [ ! -d "artifacts" ]; then
+                        mkdir artifacts
+                    fi
                     docker save -o /home/vagrant/artifacts/danit_v.0.0.${BUILD_NUMBER}.tar serhiyslipchuk/danit:v.0.0.${BUILD_NUMBER}
                     """
             }
