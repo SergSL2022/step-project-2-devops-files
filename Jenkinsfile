@@ -60,11 +60,11 @@ pipeline {
                     ls -la
                     docker build -t serhiyslipchuk/danit:v.0.0.${BUILD_NUMBER} .
                     docker images
-                    cd ~/jenkins
+                    cd ~/jenkins/workspace/step-project-2
                     if [ ! -d "artifacts" ]; then
                         mkdir artifacts
                     fi
-                    docker save -o /home/vagrant/jenkins/artifacts/danit_v.0.0.${BUILD_NUMBER}.tar serhiyslipchuk/danit:v.0.0.${BUILD_NUMBER}
+                    docker save -o /home/vagrant/jenkins/workspace/step-project-2/artifacts/danit_v.0.0.${BUILD_NUMBER}.tar serhiyslipchuk/danit:v.0.0.${BUILD_NUMBER}
                     """
             }
         }
@@ -85,7 +85,7 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: "**/artifacts/danit_v.0.0.${BUILD_NUMBER}.tar", allowEmptyArchive: true
+            archiveArtifacts artifacts: "artifacts/danit_v.0.0.${BUILD_NUMBER}.tar", allowEmptyArchive: true
         }
     }
 }
