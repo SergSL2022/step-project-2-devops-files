@@ -78,3 +78,33 @@ Adding Gitlab credentials (login and token)
 ![alt text](<screenshots/Знімок екрана з 2024-03-21 00-00-11.png>)
 ![alt text](<screenshots/Знімок екрана з 2024-03-21 00-00-16.png>)
 ![alt text](<screenshots/Знімок екрана з 2024-03-21 00-00-27.png>)
+
+STEP 8 ===>
+
+Jenkinsfile: https://github.com/SergSL2022/step-project-2-devops-files/blob/main/Jenkinsfile
+
+Creating pipeline
+![alt text](<screenshots/Знімок екрана з 2024-03-23 00-49-32.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 00-50-34.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 00-51-42.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 00-52-35.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 00-53-33.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 00-54-58.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 00-55-54.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 00-56-04.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 00-57-21.png>)
+
+Run pipeline without artifacts adding
+![alt text](<screenshots/Знімок екрана з 2024-03-23 18-59-06.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 18-59-30.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 18-59-41.png>)
+
+Run pipeline with artifacts
+![alt text](<screenshots/Знімок екрана з 2024-03-23 19-02-50.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 19-02-58.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 19-03-05.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 19-05-33.png>)
+
+Pipeline result in Docker hub registry
+![alt text](<screenshots/Знімок екрана з 2024-03-23 19-06-30.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 19-06-39.png>)

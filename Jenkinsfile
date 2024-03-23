@@ -40,6 +40,7 @@ pipeline {
                         pwd
                         ls -la
                         npm run test
+                        exit 1
                         """
                     } catch (Exception e) {
                         currentBuild.result = 'FAILURE'
