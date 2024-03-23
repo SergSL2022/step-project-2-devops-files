@@ -108,3 +108,11 @@ Run pipeline with artifacts
 Pipeline result in Docker hub registry
 ![alt text](<screenshots/Знімок екрана з 2024-03-23 19-06-30.png>)
 ![alt text](<screenshots/Знімок екрана з 2024-03-23 19-06-39.png>)
+
+Create an Error in stage "Running tests"
+![alt text](<screenshots/Знімок екрана з 2024-03-23 19-10-32.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 19-18-23.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 19-18-43.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 19-19-00.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 19-19-19.png>)
+![alt text](<screenshots/Знімок екрана з 2024-03-23 19-19-53.png>)
