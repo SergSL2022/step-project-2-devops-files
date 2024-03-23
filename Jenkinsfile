@@ -51,32 +51,28 @@ pipeline {
         
         stage('Build Docker image') {
             steps {
-                catchError(stageResult: 'UNSTABLE', buildResult: 'SUCCESS') {
-                    echo "Building Docker image"
-                    sh """
-                        pwd
-                        ls -la
-                        npm run build
-                        pwd
-                        ls -la
-                        docker build -t serhiyslipchuk/danit:v.0.0.${BUILD_NUMBER} .
-                        docker images
+                echo "Building Docker image"
+                sh """
+                    pwd
+                    ls -la
+                    CI=false npm run build
+                    pwd
+                    ls -la
+                    docker build -t serhiyslipchuk/danit:v.0.0.${BUILD_NUMBER} .
+                    docker images
                     """
-                }
             }
         }
         
        
         stage('Push Docker image') {
             steps {
-                catchError(stageResult: 'UNSTABLE', buildResult: 'SUCCESS') {
-                    echo "Pushing Docker image to Dockerhub registry"
-                    withCredentials([usernamePassword(credentialsId: 'Dockerhub', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USER')]) {
-                        sh """
-                            docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
-                            docker push serhiyslipchuk/danit:v.0.0.${BUILD_NUMBER}
-                        """
-                    }
+                echo "Pushing Docker image to Dockerhub registry"
+                withCredentials([usernamePassword(credentialsId: 'Dockerhub', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USER')]) {
+                    sh """
+                        docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+                        docker push serhiyslipchuk/danit:v.0.0.${BUILD_NUMBER}
+                    """
                 }
             }
         }
