@@ -85,7 +85,7 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: "/home/vagrant/jenkins/artifacts/danit_v.0.0.${BUILD_NUMBER}.tar", allowEmptyArchive: true
+            archiveArtifacts artifacts: "**/artifacts/danit_v.0.0.${BUILD_NUMBER}.tar", allowEmptyArchive: true
         }
     }
 }
